@@ -28,4 +28,9 @@ function Encyclopediat()
   }
 }
 
+function compress_dat_url(url)
+{
+  return url.substr(0,12)+".."+url.substr(url.length-3,2);
+}
+
 invoke.seal("main","encyclopediat");

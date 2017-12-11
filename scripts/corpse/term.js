@@ -14,7 +14,7 @@ function Term(name)
 
     html += "<h2>"+this.name+"</h2>"
     var v = this.find_active_version();
-    html += "<div class='term active'>"+v.entry+"<note>Edited on <b>"+v.updated+"</b> by <a href='"+v.auth.substr(0,16)+"'>"+(v.auth == invoke.vessel.url ? "You" : v.auth.substr(0,16))+"</a>"+(this.versions.length > 1 ? ", against <a>"+this.versions.length+" other</a> versions" : "")+"</note></div>";
+    html += "<div class='term active'>"+v.entry+"<note><action>Edit</action>Last change <b>"+v.updated+"</b> by <a href='"+v.auth+"'>"+(v.auth == invoke.vessel.url ? "You" : compress_dat_url(v.auth))+"</a>"+(this.versions.length > 1 ? ", against <a>"+this.versions.length+" other</a> versions" : "")+"</note></div>";
 
     return html;
   }
