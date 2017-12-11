@@ -18,13 +18,14 @@ yu { position: relative; display: block }
 
 #md div.term { margin-bottom:30px; }
 #md div.term p { font-size:12px; line-height: 20px }
+#md div.term p a { font-weight: medium; color:blue; }
 #md div.term.active p { font-size:20px; line-height: 28px; }
 #md div.term note { display: block; font-size:12px; }
 #md div.term note b { font-weight: bold }
 #md div.term note a { font-weight: bold; color:blue; }
 #md div.term.history { color:#999; padding-left:30px; border-left:2px solid #ccc; max-width: 400px; }
 
-#md list.sidebar { float: right;width: 240px;padding: 15px;font-size: 12px;line-height: 20px;font-weight: bold;color: black;columns: 2;}
+#md list.sidebar { float: right;width: 260px;padding: 15px 0px;font-size: 12px;line-height: 20px;font-weight: bold;color: black;columns: 2;border-top: 1px solid black;margin-top: 55px;}
 #md list.sidebar a:hover { text-decoration: underline; }
 
 #md list { display: block; }
