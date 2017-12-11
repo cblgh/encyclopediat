@@ -13,13 +13,23 @@ function Term(name)
     var html = "";
 
     html += "<h2>"+this.name+"</h2>"
-    
+    var v = this.find_active_version();
+    html += "<div class='term active'>"+v.entry+"<note>Edited on <b>"+v.updated+"</b> by <a href='"+v.auth.substr(0,16)+"'>"+(v.auth == invoke.vessel.url ? "You" : v.auth.substr(0,16))+"</a></note></div>";
+
+    return html;
+  }
+
+  this.find_active_version = function()
+  {
+    var version = null;
     for(v_id in this.versions){
       var v = this.versions[v_id];
-      html += "<div class='term "+(v_id == 0 ? "latest" : "history")+"'>"+v.entry+"<note>Edited on <b>"+v.updated+"</b> by <a href=''>"+v.auth.substr(0,16)+"</a></note></div>";
+      if(v.auth == invoke.vessel.url){
+        return v;
+      }
+      version = v;
     }
-    
-    return html;
+    return version;
   }
 }
 

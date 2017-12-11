@@ -1,10 +1,10 @@
 
-body { overflow-x:hidden; font-size:11pt; font-family: 'Helvetica Neue','Helvetica'; padding:30px; line-height:20pt; background:#fff; padding-bottom: 140px; width: 100vw; display: flex; flex-direction: column; padding: 0px; min-width: 900px}
+body { overflow-x:hidden; font-size:11pt; font-family: 'Helvetica Neue','Helvetica'; padding:30px; line-height:20pt; background:#fff; padding-bottom: 140px; width: 100vw; display: flex; flex-direction: column; padding: 50px 0px; min-width: 900px; }
 yu { position: relative; display: block } 
 #encyclopediat { max-width: 800px; margin:30px auto; width:100%; }
 #hd { position: relative; display: block }
 #hd h1 { font-size:30px; font-weight: bold; border-bottom: 2px solid black; padding: 15px 0px; margin-bottom:30px; }
-#hd input { display: inline-block;background: white;border-radius: 20px;position: absolute;top: 15px;right: 0px;line-height: 30px;color: white;padding: 0px 15px;font-size: 12px;border: 2px solid #ccc;}
+#hd input { display: inline-block;background: white;position: absolute;top: 15px;right: 0px;line-height: 41px;color: black;font-size: 12px;border-bottom: 2px solid #ccc;width: 260px;}
 
 #md { margin-bottom:30px; }
 #md h2 { font-size:20px; font-weight: bold; border-bottom: 1px solid black; padding: 15px 0px; margin-bottom:15px; max-width: 500px}
@@ -24,7 +24,8 @@ yu { position: relative; display: block }
 #md div.term note a { font-weight: bold; color:blue; }
 #md div.term.history { color:#999; padding-left:30px; border-left:2px solid #ccc; max-width: 400px; }
 
-#md list.sidebar { background: #eee;float: right;width: 240px;padding: 15px;font-size: 12px;line-height: 20px;text-decoration: underline;font-weight: bold;color: black;}
+#md list.sidebar { float: right;width: 240px;padding: 15px;font-size: 12px;line-height: 20px;font-weight: bold;color: black;columns: 2;}
+#md list.sidebar a:hover { text-decoration: underline; }
 
 #md list { display: block; }
 #md list ln { display: block; }

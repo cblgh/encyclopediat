@@ -15,7 +15,7 @@ function Layout(host)
     for(id in this.host.collector.dict){
       var term = this.host.collector.dict[id];
       html += term.to_html();
-      sidebar_html += "<ln>"+term.name+"</ln>"
+      sidebar_html += "<ln><a href='#"+term.name+"'>"+term.name+"</a></ln>"
     }
     this.md.innerHTML = "<list class='sidebar'>"+sidebar_html+"</list><list>"+html+"</list>";
   }
