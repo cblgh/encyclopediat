@@ -7,10 +7,11 @@ yu { position: relative; display: block }
 #hd input { display: inline-block;background: white;position: absolute;top: 15px;right: 0px;line-height: 41px;color: black;font-size: 12px;border-bottom: 2px solid #ccc;width: 260px;}
 
 action { display: inline-block;background: #198DB3;color: white;font-weight: bold;margin-right: 10px;line-height: 20px;padding: 0px 5px;border-radius:3px; font-size:11px;}
-action:hover { background:#198DB3; text-decoration: underline; }
+action:hover { background:#198DB3; text-decoration: underline; cursor: pointer; }
+action.add { background: black }
 
 #md { margin-bottom:30px; }
-#md textarea { background: #ddd;display: block;margin-bottom: 5px;width: 100%;padding: 15px;font-family: 'input_mono_regular';font-size: 12px;border-radius: 3px; line-height: 20px; }
+#md textarea { background: #ddd;display: block;margin-bottom: 5px;width: 100%;padding: 15px;font-family: 'input_mono_regular';font-size: 12px;border-radius: 3px; line-height: 20px; display: none }
 #md h2 { font-size:20px; font-weight: bold; border-bottom: 1px solid black; padding: 15px 0px; margin-bottom:15px; max-width: 500px}
 #md h2.auth { color:#198DB3; }
 #md hs { display: block; font-size: 12px; margin-bottom: 15px; max-width: 500px }

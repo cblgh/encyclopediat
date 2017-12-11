@@ -14,7 +14,17 @@ function Term(name)
 
     var v = this.find_active_version();
     html += "<h2 class='"+(v.auth == invoke.vessel.url ? "auth" : "aggr")+"'>"+this.name+"</h2>"
-    html += "<div class='term active'>"+v.entry+"<note><action>"+(v.auth == invoke.vessel.url ? "Edit" : "Add")+"</action>Last change <b>"+v.updated+"</b> by <a href='"+v.auth+"'>"+(v.auth == invoke.vessel.url ? "You" : compress_dat_url(v.auth))+"</a>"+(this.versions.length > 1 ? ", against <a>"+this.versions.length+" versions</a>" : "")+".</note></div>";
+    html += "<div class='term active'>"+v.entry+"<note>"+this.action_html()+"Last change <b>"+v.updated+"</b> by <a href='"+v.auth+"'>"+(v.auth == invoke.vessel.url ? "You" : compress_dat_url(v.auth))+"</a>"+(this.versions.length > 1 ? ", against <a>"+this.versions.length+" versions</a>" : "")+".</note></div>";
+
+    return html;
+  }
+
+  this.action_html = function()
+  {
+    var html = "";
+
+    var v = this.find_active_version();
+    html += `<action onclick="invoke.vessel.edit('${this.name}')" class='${(v.auth == invoke.vessel.url ? "edit" : "add")}'>${(v.auth == invoke.vessel.url ? "Edit" : "Add")}</action>`;
 
     return html;
   }

@@ -26,6 +26,12 @@ function Encyclopediat()
   {
     this.corpse.update();
   }
+
+  this.edit = function(e)
+  {
+    var term = this.collector.dict[e];
+    console.log(term.find_active_version())
+  }
 }
 
 function compress_dat_url(url)
