@@ -18,7 +18,7 @@ yu { position: relative; display: block }
 
 #md div.term { margin-bottom:30px; }
 #md div.term p { font-size:12px; line-height: 20px }
-#md div.term.latest p { font-size:20px; line-height: 28px; }
+#md div.term.active p { font-size:20px; line-height: 28px; }
 #md div.term note { display: block; font-size:12px; }
 #md div.term note b { font-weight: bold }
 #md div.term note a { font-weight: bold; color:blue; }
