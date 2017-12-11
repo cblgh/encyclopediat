@@ -10,7 +10,9 @@ action { display: inline-block;background: #198DB3;color: white;font-weight: bol
 action:hover { background:#198DB3; text-decoration: underline; }
 
 #md { margin-bottom:30px; }
+#md textarea { background: #ddd;display: block;margin-bottom: 5px;width: 100%;padding: 15px;font-family: 'input_mono_regular';font-size: 12px;border-radius: 3px; line-height: 20px; }
 #md h2 { font-size:20px; font-weight: bold; border-bottom: 1px solid black; padding: 15px 0px; margin-bottom:15px; max-width: 500px}
+#md h2.auth { color:#198DB3; }
 #md hs { display: block; font-size: 12px; margin-bottom: 15px; max-width: 500px }
 #md hs a { font-weight: bold; color:#198DB3; }
 #md hs b { font-weight: bold }
@@ -26,7 +28,6 @@ action:hover { background:#198DB3; text-decoration: underline; }
 #md div.term note { display: block; font-size:12px; max-width: 500px }
 #md div.term note b { font-weight: bold }
 #md div.term note a { font-weight: bold; color:#198DB3; }
-
 
 #md div.term.history { color:#999; padding-left:30px; border-left:2px solid #ccc; max-width: 400px; }
 

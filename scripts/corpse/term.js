@@ -12,9 +12,9 @@ function Term(name)
   {
     var html = "";
 
-    html += "<h2>"+this.name+"</h2>"
     var v = this.find_active_version();
-    html += "<div class='term active'>"+v.entry+"<note><action>Edit</action>Last change <b>"+v.updated+"</b> by <a href='"+v.auth+"'>"+(v.auth == invoke.vessel.url ? "You" : compress_dat_url(v.auth))+"</a>"+(this.versions.length > 1 ? ", against <a>"+this.versions.length+" other</a> versions" : "")+"</note></div>";
+    html += "<h2 class='"+(v.auth == invoke.vessel.url ? "auth" : "aggr")+"'>"+this.name+"</h2>"
+    html += "<div class='term active'>"+v.entry+"<note><action>"+(v.auth == invoke.vessel.url ? "Edit" : "Add")+"</action>Last change <b>"+v.updated+"</b> by <a href='"+v.auth+"'>"+(v.auth == invoke.vessel.url ? "You" : compress_dat_url(v.auth))+"</a>"+(this.versions.length > 1 ? ", against <a>"+this.versions.length+" versions</a>" : "")+".</note></div>";
 
     return html;
   }

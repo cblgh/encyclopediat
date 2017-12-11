@@ -16,7 +16,7 @@ function Layout(host)
       html += term.to_html();
     }
 
-    this.md.innerHTML = "<yu class='sidebar'>"+this.get_sidebar_html()+"</yu><list>"+html+"</list>";
+    this.md.innerHTML = "<textarea></textarea><yu class='sidebar'>"+this.get_sidebar_html()+"</yu><list>"+html+"</list>";
   }
 
   this.get_sidebar_html = function()
