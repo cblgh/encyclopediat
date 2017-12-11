@@ -1,6 +1,8 @@
 function Encyclopediat()
 {
   Invoke.call(this);
+
+  this.url = window.location.origin.toString();
   
   this.requirements = {
     corpse:["layout","collector","term"]

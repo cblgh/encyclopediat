@@ -14,6 +14,7 @@ function Collector(host)
   {
     var file = await archive.readFile('/aggregate.json',{timeout: 2000}).then(console.log("Installed Collector"));
     this.aggregate = JSON.parse(file).aggregate;
+    this.aggregate.push(this.host.url)
     this.load(this.aggregate)
   }
 
