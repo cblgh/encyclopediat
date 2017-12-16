@@ -4,7 +4,26 @@ function Layout(host)
 
   this.start = function()
   {
-    this.hd.innerHTML = `<h1>Encyclopediat</h1><input type='text' placeholder='Filter'/>`;
+    this.hd.innerHTML = `<h1>Encyclopediat</h1><input id='filter' type='text' placeholder='Filter'/>`;
+  }
+
+  this.attach_listeners = function() {
+    document.getElementById("filter").addEventListener("keydown", function(e) {
+      console.log("wow i received", e)
+    })
+
+    document.getElementById("operator").addEventListener("keydown", function(e) {
+      if (e.key == "Enter" && !e.shiftKey) {
+        e.preventDefault()
+        var input = this.value
+        var term = input.split("\n")[0]
+        var entry = input.split("\n").slice(1).join("\n")
+        console.log("term", term)
+        console.log("entry", entry)
+        // clear
+        this.value = ""
+      }
+    })
   }
 
   this.update = function()
@@ -16,7 +35,8 @@ function Layout(host)
       html += term.to_html();
     }
 
-    this.md.innerHTML = "<textarea></textarea><yu class='sidebar'>"+this.get_sidebar_html()+"</yu><list>"+html+"</list>";
+    this.md.innerHTML = "<textarea id='operator'></textarea><yu class='sidebar'>"+this.get_sidebar_html()+"</yu><list>"+html+"</list>";
+    this.attach_listeners()
   }
 
   this.get_sidebar_html = function()

@@ -11,7 +11,7 @@ action:hover { background:#198DB3; text-decoration: underline; cursor: pointer; 
 action.add { background: black }
 
 #md { margin-bottom:30px; }
-#md textarea { background: #ddd;display: block;margin-bottom: 5px;width: 100%;padding: 15px;font-family: 'input_mono_regular';font-size: 12px;border-radius: 3px; line-height: 20px; display: none }
+#md textarea { background: #ddd;display: block;margin-bottom: 5px;width: 100%;padding: 15px;font-family: 'input_mono_regular';font-size: 12px;border-radius: 3px; line-height: 20px }
 #md h2 { font-size:20px; font-weight: bold; border-bottom: 1px solid black; padding: 15px 0px; margin-bottom:15px; max-width: 500px}
 #md h2.auth { color:#198DB3; }
 #md hs { display: block; font-size: 12px; margin-bottom: 15px; max-width: 500px }
